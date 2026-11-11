@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0b1830" name="theme-color" />
+    <meta content="Tantara malagasy : horaires et fréquences de diffusion à Madagascar, toute la semaine."
+        name="description" />
+    <title>Tantara malagasy</title>
+    <link href="../assets/logo.svg" rel="icon" type="image/svg+xml" />
+    <link href="../vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/icons/local-icons.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top-strip">
+        <div class="container d-flex justify-content-between"><span><i class="bx bx-broadcast"></i> Fandaharam-potoana
+                amin'ny onjam-peo</span><span id="topClock">Antananarivo · --:--</span></div>
+    </div>
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-shell"><a aria-label="Tantara malagasy - Accueil" class="brand"
+                href="../index.html"><img alt="Logo Tantara malagasy" src="../assets/logo.svg" /><span>TANTARA
+                    <b>MALAGASY</b><small>RADIO PROGRAMME</small></span></a>
+            <nav aria-label="Navigation principale" class="main-nav" id="mainNav"><a class="nav-link"
+                    href="../index.html"><i class="bx bx-home-alt-2"></i><span
+                        data-nav="index.html">Fandraisana</span></a><a aria-current="page" class="nav-link active"
+                    href="../pages/programme.html"><i class="bx bx-calendar-week"></i><span
+                        data-nav="programme.html">Fandaharana</span></a><a class="nav-link"
+                    href="../pages/about.html"><i class="bx bx-info-circle"></i><span data-nav="about.html">Momba
+                        anay</span></a><a class="nav-link" href="../pages/faq.html"><i
+                        class="bx bx-help-circle"></i><span data-nav="faq.html">Fanontaniana</span></a><a
+                    class="nav-link" href="../pages/contact.html"><i class="bx bx-envelope"></i><span
+                        data-nav="contact.html">Fifandraisana</span></a><a class="nav-link"
+                    href="../pages/favoris.html"><i class="bx bx-heart"></i><span
+                        data-nav="favoris.html">Ankafizina</span><span aria-label="Isan’ny ankafizina"
+                        class="favorites-nav-count"></span></a></nav>
+            <div class="nav-actions">
+                <div class="language-control"><i class="bx bx-globe"></i><select aria-label="Choisir la langue"
+                        class="language-select" id="languageSelect" title="Langue / Language">
+                        <option value="en">EN</option>
+                        <option selected="selected" value="fr">FR</option>
+                    </select></div><button aria-label="Changer de thème" class="round-action" id="themeToggle"
+                    title="Changer de thème"><i class="bx bx-moon"></i></button><a
+                    class="btn btn-primary nav-schedule-link" href="../pages/programme.html"><i
+                        class="bx bx-calendar-week"></i><span data-nav-schedule="">Jereo ny ora</span></a><button
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Sokafy ny menio"
+                    class="round-action mobile-toggle" id="menuToggle"><i class="bx bx-menu"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section-pad schedule-section" id="programme">
+            <div class="container">
+                <div class="section-intro text-center"><span class="section-tag">PROGRAMME HEBDOMADAIRE</span>
+                    <h2>Ne manquez plus <span>aucune diffusion.</span></h2>
+                    <p>Sélectionnez un jour et retrouvez les stations, heures et fréquences FM en quelques secondes.</p>
+                </div>
+                <div class="next-card">
+                    <div class="next-icon"><i class="bx bx-broadcast"></i></div>
+                    <div class="next-body"><span class="small-label">PROCHAINE DIFFUSION</span><strong
+                            id="nextStation">Recherche en cours…</strong><span id="nextDetails">—</span></div>
+                    <div class="next-timer"><span>DÉBUT DANS</span><strong id="countdown">--:--:--</strong></div>
+                </div>
+                <div class="schedule-panel">
+                    <div class="panel-top">
+                        <div><span class="section-tag">CHOISIR UN JOUR</span>
+                            <h3>Les horaires de diffusion</h3>
+                        </div><span class="date-pill" id="todayDate">—</span>
+                    </div>
+                    <div aria-label="Jours de diffusion" class="day-tabs" id="dayTabs" role="tablist"></div>
+                    <div class="search-row"><label class="search-field"><i class="bx bx-search"></i><input
+                                aria-label="Rechercher une station ou une fréquence" id="searchInput"
+                                placeholder="Rechercher une radio ou une fréquence…" type="search" /></label><label
+                            class="filter-field"><i class="bx bx-filter-alt"></i><select
+                                aria-label="Filtrer les programmes" id="statusFilter">
+                                <option value="all">Tous les programmes</option>
+                                <option value="today">Aujourd'hui uniquement</option>
+                                <option value="upcoming">À venir</option>
+                                <option value="past">Déjà passés</option>
+                            </select></label></div>
+                    <div class="result-heading">
+                        <div>
+                            <h4 id="selectedDayTitle">Programmes</h4><span id="resultsCount">—</span>
+                        </div><span class="live-date"><i class="bx bx-time"></i> <span
+                                id="madagascarClock">—</span></span>
+                    </div>
+                    <div class="program-grid" id="programGrid"></div>
+                    <div class="empty-state d-none" id="emptyState"><i class="bx bx-search-alt"></i><strong>Aucun
+                            résultat</strong>
+                        <p>Essayez une autre recherche ou un autre filtre.</p>
+                    </div>
+                </div>
+                <div class="full-schedule">
+                    <div class="full-head">
+                        <div><span class="section-tag">VUE D'ENSEMBLE</span>
+                            <h3>Le programme complet</h3>
+                            <p>Affichage du jour sélectionné ci-dessus. Cliquez sur un autre jour pour consulter ses
+                                horaires.</p>
+                        </div><button class="btn btn-outline-dark" id="printButton"><i class="bx bx-printer"></i>
+                            Imprimer</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Jour</th>
+                                    <th>Heure</th>
+                                    <th>Station radio</th>
+                                    <th>Fréquence</th>
+                                </tr>
+                            </thead>
+                            <tbody id="fullSchedule"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div><a class="brand footer-brand" href="../index.html"><img alt="Logo"
+                            src="../assets/logo.svg" /><span>TANTARA <b>MALAGASY</b><small>RADIO
+                                PROGRAMME</small></span></a>
+                    <p>Ny tantara tianao, amin'ny onjam-peo akaiky anao.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4><a href="../index.html">Accueil</a><a
+                        href="../pages/programme.html">Programme</a><a href="../pages/about.html">À propos</a>
+                </div>
+                <div>
+                    <h4>Informations</h4><a href="../pages/faq.html">FAQ</a><a
+                        href="../pages/favoris.html">Favoris</a><a href="../pages/contact.html">Contact</a><a
+                        href="../pages/programme.html">Horaires FM</a>
+                </div>
+                <div>
+                    <h4>À savoir</h4>
+                    <p>Horaires historiques fournis à titre indicatif. Vérifiez les diffusions auprès des stations
+                        concernées.</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© <span id="year"></span> , Tantara malagasy indray mihaino</span></div>
+        </div>
+    </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div aria-live="polite" class="toast" id="copyToast" role="status">
+            <div class="toast-body"><i class="bx bx-check-circle"></i> Informations copiées.</div>
+        </div>
+    </div>
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/icons/local-icons.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/favorites.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/programme.js"></script>
+    <script src="../js/i18n.js"></script>
+</body>
+
+</html>

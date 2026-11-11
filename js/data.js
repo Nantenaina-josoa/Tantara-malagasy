@@ -1,0 +1,97 @@
+const DAYS = [
+  "Alahady",
+  "Alatsinainy",
+  "Talata",
+  "Alarobia",
+  "Alakamisy",
+  "Zoma",
+  "Sabotsy",
+];
+const SCHEDULE = {
+  Alatsinainy: [
+    ["17:00", "Soa Radio", 96.8],
+    ["20:00", "Vakiniadiana", 91.6],
+    ["20:15", "RFV", 105.0],
+  ],
+  Talata: [
+    ["19:00", "Soa Radio", 96.8],
+    ["20:00", "ICM Radio", 104.8],
+    ["20:15", "Radio Vakiniadiana", 91.6],
+    ["20:30", "Radio Fanambarana", 98.4],
+    ["22:45", "Mampita Radio", 104.6],
+  ],
+  Alarobia: [
+    ["18:00", "Olivasoa Radio", 91.0],
+    ["19:00", "Soa Radio", 96.8],
+    ["20:00", "ACEEM Radio", 103.4],
+    ["20:15", "Fréquence +", 92.8],
+    ["22:00", "Relax Radio", 103.6],
+    ["22:45", "Mampita Radio", 104.6],
+  ],
+  Alakamisy: [
+    ["18:00", "Olivasoa Radio", 91.0],
+    ["19:00", "Soa Radio", 96.8],
+    ["20:00", "Solanga Radio", 100.0],
+    ["20:00", "ICM Radio", 104.8],
+    ["20:30", "Radio Plus", 100.2],
+    ["21:00", "RVM", 106.8],
+    ["22:45", "Mampita Radio", 104.6],
+  ],
+  Zoma: [
+    ["19:00", "Soa Radio", 96.8],
+    ["20:00", "RNA", 95.2],
+    ["20:00", "Radio Fahazavana", 88.6],
+    ["20:30", "Radio Plus", 100.2],
+    ["22:45", "Mampita Radio", 104.6],
+  ],
+  Sabotsy: [
+    ["15:30", "Radio Plus", 100.2],
+    ["16:00", "Radio Antsiva", 97.6],
+    ["18:00", "RFV", 100.6],
+    ["19:00", "Soa Radio", 96.8],
+    ["19:00", "XI Radio", 89.6],
+    ["19:15", "MBS Radio", 95.4],
+    ["20:00", "Fréquence +", 92.8],
+    ["20:00", "RVM", 106.8],
+    ["20:00", "An'i Kristy", 107.6],
+    ["20:00", "ACEEM Radio", 103.4],
+    ["20:30", "RNM", 99.2],
+    ["20:30", "Iarivo Radio", 95.6],
+    ["22:45", "Mampita Radio", 104.6],
+  ],
+  Alahady: [
+    ["17:00", "RVM", 106.8],
+    ["17:00", "KOLO FM", 88.8],
+    ["17:00", "Top Radio", 102.8],
+    ["18:00", "MBS Radio", 95.4],
+    ["18:00", "Radio Plus", 100.2],
+    ["19:00", "Soa Radio", 96.8],
+    ["19:00", "VIVA Radio", 98.8],
+    ["19:00", "RNA", 95.2],
+    ["19:00", "ICM Radio", 104.8],
+    ["20:00", "Solanga Radio", 100.0],
+    ["20:00", "Radio Fivoarana", 88.2],
+    ["20:00", "Radio Record", 92.4],
+    ["20:15", "O'FM", 91.0],
+    ["20:30", "RDB", 93.4],
+    ["20:30", "Gasy Radio", 99.6],
+    ["21:00", "Radio Fitahintsoa", 96.2],
+    ["22:00", "Relax FM", 103.6],
+    ["22:45", "Mampita Radio", 104.6],
+  ],
+};
+const PROGRAMS = [
+  ...new Map(
+    Object.entries(SCHEDULE)
+      .flatMap(([jour, rows]) =>
+        rows.map(([heure, radio, frequence]) => ({
+          id: `${jour}-${heure}-${radio}-${frequence}`,
+          jour,
+          heure,
+          radio,
+          frequence,
+        })),
+      )
+      .map((p) => [p.id, p]),
+  ).values(),
+];

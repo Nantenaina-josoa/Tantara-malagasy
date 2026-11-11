@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0b1830" name="theme-color" />
+    <meta content="Tantara malagasy : horaires et fréquences de diffusion à Madagascar, toute la semaine."
+        name="description" />
+    <title>Tantara malagasy</title>
+    <link href="assets/logo.svg" rel="icon" type="image/svg+xml" />
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="vendor/icons/local-icons.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top-strip">
+        <div class="container d-flex justify-content-between"><span><i class="bx bx-broadcast"></i> Fandaharam-potoana
+                amin'ny onjam-peo</span><span id="topClock">Antananarivo · --:--</span></div>
+    </div>
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-shell"><a aria-label="Tantara malagasy - Accueil" class="brand"
+                href="index.html"><img alt="Logo Tantara malagasy" src="assets/logo.svg" /><span>TANTARA <b>MALAGASY</b><small>RADIO PROGRAMME</small></span></a>
+            <nav aria-label="Navigation principale" class="main-nav" id="mainNav"><a aria-current="page"
+                    class="nav-link active" href="index.html"><i class="bx bx-home-alt-2"></i><span
+                        data-nav="index.html">Fandraisana</span></a><a class="nav-link" href="pages/programme.html"><i
+                        class="bx bx-calendar-week"></i><span data-nav="programme.html">Fandaharana</span></a><a
+                    class="nav-link" href="pages/about.html"><i class="bx bx-info-circle"></i><span
+                        data-nav="about.html">Momba anay</span></a><a class="nav-link" href="pages/faq.html"><i
+                        class="bx bx-help-circle"></i><span data-nav="faq.html">Fanontaniana</span></a><a
+                    class="nav-link" href="pages/contact.html"><i class="bx bx-envelope"></i><span
+                        data-nav="contact.html">Fifandraisana</span></a><a class="nav-link" href="pages/favoris.html"><i
+                        class="bx bx-heart"></i><span data-nav="favoris.html">Ankafizina</span><span
+                        aria-label="Isan’ny ankafizina" class="favorites-nav-count"></span></a></nav>
+            <div class="nav-actions">
+                <div class="language-control"><i class="bx bx-globe"></i><select aria-label="Choisir la langue"
+                        class="language-select" id="languageSelect" title="Langue / Language">
+                        <option value="en">EN</option>
+                        <option selected="selected" value="fr">FR</option>
+                    </select></div><button aria-label="Changer de thème" class="round-action" id="themeToggle"
+                    title="Changer de thème"><i class="bx bx-moon"></i></button><a
+                    class="btn btn-primary nav-schedule-link" href="pages/programme.html"><i
+                        class="bx bx-calendar-week"></i><span data-nav-schedule="">Jereo ny ora</span></a><button
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Sokafy ny menio"
+                    class="round-action mobile-toggle" id="menuToggle"><i class="bx bx-menu"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-layout">
+                <div class="hero-copy"><span class="eyebrow"><span class="pulse-dot"></span> NY FANDAHARANAO
+                        ISAN-KERINANDRO</span>
+                    <h1>Ny tantara tianao,<br /><em>amin'ny onjam-peo</em><br />akaiky anao.</h1>
+                    <p>Retrouvez facilement les horaires et fréquences FM de <strong>Tantara malagasy</strong>,
+                        partout à Madagascar. Un programme clair, jour après jour.</p>
+                    <div class="hero-buttons"><a class="btn btn-primary btn-lg" href="pages/programme.html">Explorer le
+                            programme <i class="bx bx-right-arrow-alt"></i></a><a class="btn btn-soft btn-lg"
+                            href="pages/about.html">Découvrir <i class="bx bx-play-circle"></i></a></div>
+                    <div class="hero-meta"><span><i class="bx bx-calendar-week"></i> 7 jours sur 7</span><span><i
+                                class="bx bx-radio"></i> Stations FM</span><span><i class="bx bx-map"></i>
+                            Madagascar</span></div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-grid"></div>
+                    <div class="radio-circle">
+                        <div class="radio-orbit orbit-a"></div>
+                        <div class="radio-orbit orbit-b"></div><img alt="Symbole radio Tantara malagasy"
+                            src="assets/logo.svg" />
+                    </div>
+                    <div class="floating-label"><i class="bx bx-volume-full"></i><span>À l'écoute de vos
+                            histoires<small>Programme hebdomadaire</small></span></div>
+                    <div class="visual-badge"><i class="bx bx-signal-5"></i> FM RADIO</div>
+                </div>
+            </div>
+        </section>
+        <section class="quick-info">
+            <div class="container info-grid">
+                <div class="info-item"><i class="bx bx-calendar"></i>
+                    <div><strong>7 jours</strong><span>de programmation</span></div>
+                </div>
+                <div class="info-item"><i class="bx bx-station"></i>
+                    <div><strong id="stationCount">—</strong><span>stations répertoriées</span></div>
+                </div>
+                <div class="info-item"><i class="bx bx-time-five"></i>
+                    <div><strong id="broadcastCount">—</strong><span>créneaux de diffusion</span></div>
+                </div>
+                <div class="info-item"><i class="bx bx-map-pin"></i>
+                    <div><strong>Madagascar</strong><span>heure locale GMT+3</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section-pad home-program-cta">
+            <div class="container text-center">
+                <h2>Consultez les horaires par jour</h2>
+                <p>Retrouvez toutes les stations et leurs fréquences dans notre programme interactif.</p><a
+                    class="btn btn-primary btn-lg" href="pages/programme.html">Voir le programme <i
+                        class="bx bx-right-arrow-alt"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div><a class="brand footer-brand" href="index.html"><img alt="Logo"
+                            src="assets/logo.svg" /><span>TANTARA <b>MALAGASY</b><small>RADIO
+                                PROGRAMME</small></span></a>
+                    <p>Ny tantara tianao, amin'ny onjam-peo akaiky anao.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4><a href="index.html">Accueil</a><a href="pages/programme.html">Programme</a><a
+                        href="pages/about.html">À propos</a>
+                </div>
+                <div>
+                    <h4>Informations</h4><a href="pages/faq.html">FAQ</a><a href="pages/favoris.html">Favoris</a><a
+                        href="pages/contact.html">Contact</a><a href="pages/programme.html">Horaires FM</a>
+                </div>
+                <div>
+                    <h4>À savoir</h4>
+                    <p>Horaires historiques fournis à titre indicatif. Vérifiez les diffusions auprès des stations
+                        concernées.</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© <span id="year"></span> , Tantara malagasy indray mihaino</span></div>
+        </div>
+    </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div aria-live="polite" class="toast" id="copyToast" role="status">
+            <div class="toast-body"><i class="bx bx-check-circle"></i> Informations copiées.</div>
+        </div>
+    </div>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/icons/local-icons.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+
+</html>

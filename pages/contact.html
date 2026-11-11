@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0b1830" name="theme-color" />
+    <meta content="Tantara malagasy : horaires et fréquences de diffusion à Madagascar, toute la semaine."
+        name="description" />
+    <title>Tantara malagasy</title>
+    <link href="../assets/logo.svg" rel="icon" type="image/svg+xml" />
+    <link href="../vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/icons/local-icons.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top-strip">
+        <div class="container d-flex justify-content-between"><span><i class="bx bx-broadcast"></i> Fandaharam-potoana
+                amin'ny onjam-peo</span><span id="topClock">Antananarivo · --:--</span></div>
+    </div>
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-shell"><a aria-label="Tantara malagasy - Accueil" class="brand"
+                href="../index.html"><img alt="Logo Tantara malagasy" src="../assets/logo.svg" /><span>TANTARA
+                    <b>MALAGASY</b><small>RADIO PROGRAMME</small></span></a>
+            <nav aria-label="Navigation principale" class="main-nav" id="mainNav"><a class="nav-link"
+                    href="../index.html"><i class="bx bx-home-alt-2"></i><span
+                        data-nav="index.html">Fandraisana</span></a><a class="nav-link"
+                    href="../pages/programme.html"><i class="bx bx-calendar-week"></i><span
+                        data-nav="programme.html">Fandaharana</span></a><a class="nav-link"
+                    href="../pages/about.html"><i class="bx bx-info-circle"></i><span data-nav="about.html">Momba
+                        anay</span></a><a class="nav-link" href="../pages/faq.html"><i
+                        class="bx bx-help-circle"></i><span data-nav="faq.html">Fanontaniana</span></a><a
+                    aria-current="page" class="nav-link active" href="../pages/contact.html"><i
+                        class="bx bx-envelope"></i><span data-nav="contact.html">Fifandraisana</span></a><a
+                    class="nav-link" href="../pages/favoris.html"><i class="bx bx-heart"></i><span
+                        data-nav="favoris.html">Ankafizina</span><span aria-label="Isan’ny ankafizina"
+                        class="favorites-nav-count"></span></a></nav>
+            <div class="nav-actions">
+                <div class="language-control"><i class="bx bx-globe"></i><select aria-label="Choisir la langue"
+                        class="language-select" id="languageSelect" title="Langue / Language">
+                        <option value="en">EN</option>
+                        <option selected="selected" value="fr">FR</option>
+                    </select></div><button aria-label="Changer de thème" class="round-action" id="themeToggle"
+                    title="Changer de thème"><i class="bx bx-moon"></i></button><a
+                    class="btn btn-primary nav-schedule-link" href="../pages/programme.html"><i
+                        class="bx bx-calendar-week"></i><span data-nav-schedule="">Jereo ny ora</span></a><button
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Sokafy ny menio"
+                    class="round-action mobile-toggle" id="menuToggle"><i class="bx bx-menu"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section-pad contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy"><span class="section-tag">CONTACT</span>
+                    <h2>Une question ou <span>une suggestion ?</span></h2>
+                    <p>Vous avez remarqué une erreur dans un horaire ou une fréquence ? Préparez un message depuis le
+                        formulaire ci-contre.</p>
+                    <!-- <div aria-label="Portrait du contact" class="contact-profile reveal">
+                        <img
+                            alt="Portrait du responsable du site Tantara Malagasy" width="280" height="280" loading="lazy"
+                            src="../assets/portrait-contact.jpg">
+                    </div> -->
+                    <div class="contact-details">
+                        <p><i class="bx bx-phone"></i> <a href="tel:+261332043644">+261 33 20 436 44</a></p>
+                        <p><i class="bx bx-envelope"></i> <a
+                                href="mailto:r.nantenaina.josoa@gmail.com">r.nantenaina.josoa@gmail.com</a></p>
+                        <p><i class="bx bx-map-pin"></i> Antananarivo, 102</p>
+                    </div>
+                    <div class="contact-note"><i class="bx bx-info-circle"></i><span>Ce formulaire ouvre votre
+                            application de messagerie avec le texte préparé. Aucune donnée n'est envoyée à un
+                            serveur.</span></div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="row g-3">
+                        <div class="col-md-6"><label for="contactName">Votre nom</label><input class="form-control"
+                                id="contactName" maxlength="100" placeholder="Votre nom" required="" /></div>
+                        <div class="col-md-6"><label for="contactEmail">Votre e-mail</label><input class="form-control"
+                                id="contactEmail" placeholder="nom@exemple.com" required="" type="email" /></div>
+                        <div class="col-12"><label for="contactSubject">Sujet</label><select class="form-select"
+                                id="contactSubject">
+                                <option>Correction d'un horaire</option>
+                                <option>Suggestion</option>
+                                <option>Question générale</option>
+                            </select></div>
+                        <div class="col-12"><label for="contactMessage">Votre message</label><textarea
+                                class="form-control" id="contactMessage" maxlength="2000"
+                                placeholder="Écrivez votre message…" required="" rows="5"></textarea></div>
+                        <div class="col-12"><button class="btn btn-primary btn-lg w-100" type="submit">Préparer mon
+                                message <i class="bx bx-send"></i></button>
+                            <p class="form-hint" id="formHint">Le message sera adressé à r.nantenaina.josoa@gmail.com
+                                via votre messagerie.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div><a class="brand footer-brand" href="../index.html"><img alt="Logo"
+                            src="../assets/logo.svg" /><span>TANTARA <b>MALAGASY</b><small>RADIO
+                                PROGRAMME</small></span></a>
+                    <p>Ny tantara tianao, amin'ny onjam-peo akaiky anao.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4><a href="../index.html">Accueil</a><a
+                        href="../pages/programme.html">Programme</a><a href="../pages/about.html">À propos</a>
+                </div>
+                <div>
+                    <h4>Informations</h4><a href="../pages/faq.html">FAQ</a><a
+                        href="../pages/favoris.html">Favoris</a><a href="../pages/contact.html">Contact</a><a
+                        href="../pages/programme.html">Horaires FM</a>
+                </div>
+                <div>
+                    <h4>À savoir</h4>
+                    <p>Horaires historiques fournis à titre indicatif. Vérifiez les diffusions auprès des stations
+                        concernées.</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© <span id="year"></span> , Tantara malagasy indray mihaino</span></div>
+        </div>
+    </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div aria-live="polite" class="toast" id="copyToast" role="status">
+            <div class="toast-body"><i class="bx bx-check-circle"></i> Informations copiées.</div>
+        </div>
+    </div>
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/icons/local-icons.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/favorites.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/i18n.js"></script>
+</body>
+
+</html>
